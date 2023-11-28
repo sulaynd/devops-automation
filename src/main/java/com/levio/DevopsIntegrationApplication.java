@@ -9,11 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DevopsIntegrationApplication {
 
-	@GetMapping
-	public String message(){
-		return "welcome to levio";
-	}
-
 	public static void main(String[] args) {
 		SpringApplication.run(DevopsIntegrationApplication.class, args);
 	}

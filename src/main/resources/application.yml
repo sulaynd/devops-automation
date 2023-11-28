@@ -6,3 +6,7 @@ management:
           - "*"
   server:
     port: 8081
+
+  endpoint:
+    health:
+      show-details: always
