@@ -2,22 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: springBootDemo
-  name: springBootDemo
+    app: nano-demo-1
+  name: nano-demo-1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: springBootDemo
+      app: nano-demo-1
 
   template:
     metadata:
       labels:
-        app: springBootDemo
+        app: nano-demo-1
     spec:
       containers:
         - image: sulaynd/nano-demo:0.0.1-SNAPSHOT
-          name: springBootDemo
+          name: nano-demo-1
           imagePullPolicy: Always
           ports:
             - containerPort: 9002
@@ -26,9 +26,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nano-service
+  name: nano-service-1
   labels:
-    app: nano-service
+    app: nano-service-1
 spec:
   type: LoadBalancer
   ports:
@@ -36,4 +36,4 @@ spec:
       targetPort: 9002
       protocol: TCP
   selector:
-    app: springBootDemo
+    app: nano-demo-1
