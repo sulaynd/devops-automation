@@ -16,12 +16,12 @@ spec:
         app: springBootDemo
     spec:
       containers:
-        - image: sulaynd/nano-image:0.0.1
+        - image: sulaynd/nano-demo:0.0.1-SNAPSHOT
           name: springBootDemo
           imagePullPolicy: Always
           ports:
             - containerPort: 9002
-
+              
 ---
 apiVersion: v1
 kind: Service
